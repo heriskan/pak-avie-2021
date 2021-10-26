@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HTML 5 Boilerplate</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
@@ -27,7 +26,43 @@
         </div>
     </section>
     <script src="https://unpkg.com/vue@next"></script>
-    <script src="/index.js"></script>
+    <script>
+        const PbbStickers = {
+            data() {
+                return {
+                    message: 'Okee nih!',
+                    avatars: [
+                        {
+                            src: 'man1',
+                            click: 'woman9'
+                        },
+                        {
+                            src: 'woman1',
+                            click: 'woman9'
+                        },
+                        {
+                            src: 'woman2',
+                            click: 'woman9'
+                        },
+                        {
+                            src: 'woman3',
+                            click: 'woman9'
+                        },
+                        {
+                            src: 'woman4',
+                            click: 'woman9'
+                        },
+                        {
+                            src: 'woman5',
+                            click: 'woman9'
+                        }
+                    ]
+                }
+            }
+        }
+
+        Vue.createApp(PbbStickers).mount('#pbb-stickers')
+    </script>
 </body>
 
 </html>
