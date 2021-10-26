@@ -20,7 +20,8 @@
             </p>
             <div class="columns is-mobile is-multiline">
                 <div class="column is-half-mobile is-one-quarter-tablet" v-for="avatar in avatars">
-                    <img :src="'img/' + avatar.src + '.png'" alt="">
+                    <img :src="'img/' + avatar.src + '.png'" @click="swap($event, avatar)">
+                    <p>hehehe</p>
                 </div>
             </div>
         </div>
@@ -34,29 +35,43 @@
                     avatars: [
                         {
                             src: 'man1',
-                            click: 'woman9'
+                            src2: 'woman9',
+                            clicked: false
                         },
                         {
                             src: 'woman1',
-                            click: 'woman9'
+                            src2: 'woman9',
+                            clicked: false
                         },
                         {
                             src: 'woman2',
-                            click: 'woman9'
+                            src2: 'woman9',
+                            clicked: false
                         },
                         {
                             src: 'woman3',
-                            click: 'woman9'
+                            src2: 'woman9',
+                            clicked: false
                         },
                         {
                             src: 'woman4',
-                            click: 'woman9'
+                            src2: 'woman9',
+                            clicked: false
                         },
                         {
                             src: 'woman5',
-                            click: 'woman9'
+                            src2: 'woman9',
+                            clicked: false
                         }
                     ]
+                }
+            },
+            methods: {
+                swap(event, avatar) {
+                    event.target.src = "img/" + avatar.src2 +".png";
+                    setTimeout(
+                        function() { event.target.src = "img/" + avatar.src + ".png"}, 2000
+                    )
                 }
             }
         }
