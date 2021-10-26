@@ -1,13 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-	<script src="index.js"></script>
-  </body>
+</head>
+
+<body>
+    <section id="pbb-stickers" class="gallery">
+        <div class="container">
+            <h1 class="title">
+                Hello World
+            </h1>
+            <p class="subtitle">
+                {{ message }}
+            </p>
+            <div class="columns is-mobile is-multiline">
+                <div class="column is-half-mobile is-one-quarter-tablet" v-for="avatar in avatars">
+                    <img :src="'img/' + avatar.src + '.png'" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="index.js"></script>
+</body>
+
 </html>
