@@ -5,78 +5,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HTML 5 Boilerplate</title>
+    <title>Selamat Ulang Tahun</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 </head>
 
 <body>
     <section id="pbb-stickers" class="gallery">
-        <div class="container">
+        <div class="container has-text-centered">
             <h1 class="title">
-                Hello World
+                Selamat Ulang Tahun
             </h1>
             <p class="subtitle">
                 {{ message }}
             </p>
             <div class="columns is-mobile is-multiline">
-                <div class="column is-half-mobile is-one-quarter-tablet" v-for="avatar in avatars">
-                    <img :src="'img/' + avatar.src + '.png'" @click="swap($event, avatar)">
-                    <p>hehehe</p>
+                <div class="column is-half-mobile is-one-quarter-tablet" v-for="(avatar, index) in avatars">
+                    <img :src="'img/' + avatar.src + '.png'" @click="swap($event, avatar, index)">
+                    <audio :ref="'aud-' + index" preload>
+                        <source :src="'mp3/' + avatar.aud + '.mp3'" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
                 </div>
             </div>
         </div>
     </section>
-    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script>
-        const PbbStickers = {
-            data() {
-                return {
-                    message: 'Okee nih!',
-                    avatars: [
-                        {
-                            src: 'man1',
-                            src2: 'woman9',
-                            clicked: false
-                        },
-                        {
-                            src: 'woman1',
-                            src2: 'woman9',
-                            clicked: false
-                        },
-                        {
-                            src: 'woman2',
-                            src2: 'woman9',
-                            clicked: false
-                        },
-                        {
-                            src: 'woman3',
-                            src2: 'woman9',
-                            clicked: false
-                        },
-                        {
-                            src: 'woman4',
-                            src2: 'woman9',
-                            clicked: false
-                        },
-                        {
-                            src: 'woman5',
-                            src2: 'woman9',
-                            clicked: false
-                        }
-                    ]
-                }
+        var app = new Vue({
+            el: '#pbb-stickers',
+            data: {
+
+                message: 'selamat ulang tahun',
+                avatars: [
+                    {
+                        src: 'man1',
+                        src2: 'woman9',
+                        aud: 'man1'
+                    },
+                    {
+                        src: 'woman1',
+                        src2: 'woman9',
+                        aud: 'man1'
+                    },
+                    {
+                        src: 'woman2',
+                        src2: 'woman9',
+                        aud: 'man1'
+                    },
+                    {
+                        src: 'woman3',
+                        src2: 'woman9',
+                        aud: 'man1'
+                    },
+                    {
+                        src: 'woman4',
+                        src2: 'woman9',
+                        aud: 'man1'
+                    },
+                    {
+                        src: 'woman5',
+                        src2: 'woman9',
+                        aud: 'man1'
+                    }
+                ]
+
             },
             methods: {
-                swap(event, avatar) {
-                    event.target.src = "img/" + avatar.src2 +".png";
+                swap: (event, avatar, index) => {
+                    event.target.src = "img/" + avatar.src2 + ".png";
+                    var audio = app.$refs['aud-' + index][0];
+                    audio.play();
                     setTimeout(
-                        function() { event.target.src = "img/" + avatar.src + ".png"}, 2000
+                        function () { event.target.src = "img/" + avatar.src + ".png" }, audio.duration * 1000
                     )
                 }
             }
-        }
+        })
 
-        Vue.createApp(PbbStickers).mount('#pbb-stickers')
     </script>
 </body>
 
