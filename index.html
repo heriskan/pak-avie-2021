@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Selamat Ulang Tahun</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,59 +44,7 @@
         </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-    <script>
-        var app = new Vue({
-            el: '#pbb-stickers',
-            data: {
-
-                message: 'selamat ulang tahun',
-                avatars: [
-                    {
-                        src: 'man1',
-                        src2: 'woman9',
-                        aud: 'man1'
-                    },
-                    {
-                        src: 'woman1',
-                        src2: 'woman9',
-                        aud: 'man1'
-                    },
-                    {
-                        src: 'woman2',
-                        src2: 'woman9',
-                        aud: 'man1'
-                    },
-                    {
-                        src: 'woman3',
-                        src2: 'woman9',
-                        aud: 'man1'
-                    },
-                    {
-                        src: 'woman4',
-                        src2: 'woman9',
-                        aud: 'man1'
-                    },
-                    {
-                        src: 'woman5',
-                        src2: 'woman9',
-                        aud: 'man1'
-                    }
-                ]
-
-            },
-            methods: {
-                swap: (event, avatar, index) => {
-                    event.target.src = "img/" + avatar.src2 + ".png";
-                    var audio = app.$refs['aud-' + index][0];
-                    audio.play();
-                    setTimeout(
-                        function () { event.target.src = "img/" + avatar.src + ".png" }, audio.duration * 1000
-                    )
-                }
-            }
-        })
-
-    </script>
+    <script src="./index.js"></script>
 </body>
 
 </html>
