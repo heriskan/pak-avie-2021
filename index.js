@@ -2,38 +2,33 @@ var app = new Vue({
     el: '#pbb-stickers',
     data: {
 
-        message: 'selamat ulang tahun',
+        message: 'Silakan klik pada foto untuk aktifkan animasi dan suara.',
         avatars: [
             {
                 src: 'tuti',
-                nama: 'Tuti Lestari',
+                nama: 'Tuti',
                 aud: 'man1'
             },
             {
                 src: 'sitta',
-                nama: 'Sitta Alia',
+                nama: 'Sitta',
                 aud: 'sitta'
             },
             {
-                src: 'tuti',
-                nama: 'nama',
-                aud: 'man1'
+                src: 'hijri',
+                nama: 'Hijri',
+                aud: 'hijri'
             },
             {
-                src: 'tuti',
-                nama: 'nama',
-                aud: 'man1'
+                src: 'anna',
+                nama: 'Anna',
+                aud: 'anna'
             },
             {
-                src: 'tuti',
-                nama: 'nama',
+                src: 'nova',
+                nama: 'Nova',
                 aud: 'man1'
             },
-            {
-                src: 'tuti',
-                nama: 'nama',
-                aud: 'man1'
-            }
         ]
 
     },
