@@ -6,26 +6,32 @@ var app = new Vue({
         avatars: [
             {
                 src: 'tuti',
+                nama: 'Tuti Lestari',
                 aud: 'man1'
             },
             {
-                src: 'woman1',
+                src: 'tuti',
+                nama: 'nama',
                 aud: 'man1'
             },
             {
-                src: 'woman2',
+                src: 'tuti',
+                nama: 'nama',
                 aud: 'man1'
             },
             {
-                src: 'woman3',
+                src: 'tuti',
+                nama: 'nama',
                 aud: 'man1'
             },
             {
-                src: 'woman4',
+                src: 'tuti',
+                nama: 'nama',
                 aud: 'man1'
             },
             {
-                src: 'woman5',
+                src: 'tuti',
+                nama: 'nama',
                 aud: 'man1'
             }
         ]
