@@ -10,9 +10,9 @@ var app = new Vue({
                 aud: 'man1'
             },
             {
-                src: 'tuti',
-                nama: 'nama',
-                aud: 'man1'
+                src: 'sitta',
+                nama: 'Sitta Alia',
+                aud: 'sitta'
             },
             {
                 src: 'tuti',
