@@ -52,6 +52,10 @@ var app = new Vue({
         src: 'lita',
         play: false
       },
+      {
+        src: 'dwi',
+        play: false
+      },
     ]
 
   },
