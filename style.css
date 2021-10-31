@@ -5,3 +5,7 @@ body {
 .items {
   cursor: pointer;
 }
+
+.nama {
+  text-transform: capitalize;
+}
