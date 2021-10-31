@@ -56,8 +56,23 @@ var app = new Vue({
         src: 'dwi',
         play: false
       },
+      {
+        src: 'handi',
+        play: false
+      },
+      {
+        src: 'ima',
+        play: false
+      },
+      {
+        src: 'aquita-alitha',
+        play: false
+      },
+      {
+        src: 'iin',
+        play: false
+      },
     ]
-
   },
   methods: {
     swap: (event, avatar, index) => {

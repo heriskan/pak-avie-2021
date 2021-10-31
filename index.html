@@ -2,46 +2,47 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Selamat Ulang Tahun</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
-    <link rel="manifest" href="./site.webmanifest">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Selamat Ulang Tahun</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+  <link rel="manifest" href="./site.webmanifest">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
-    <section id="pbb-stickers" class="gallery">
-        <div class="container has-text-centered">
-            <h1 class="title is-size-1 has-text-weight-light">
-                Selamat Ulang Tahun Pak Avie
-            </h1>
-            <p class="subtitle">
-                {{ message }}
-            </p>
-            <div class="columns is-mobile is-multiline">
-                <div class="column is-one-third-mobile is-one-quarter-tablet is-2-desktop"
-                    v-for="(avatar, index) in avatars">
-                    <img class="items" :src="'img/' + avatar.src + '.png'" @click="swap($event, avatar, index)">
-                    <audio :ref="'aud-' + index" preload>
-                        <source :src="'mp3/' + avatar.src + '.mp3'" type="audio/mp3">
-                        Your browser does not support the audio element.
-                    </audio>
-                    <h2 class="is-size-4 has-text-weight-normal nama">{{ avatar.src }}</h2>
-                </div>
-            </div>
-        </div>
+  <div id="pbb-stickers">
+    <section class="hero has-text-centered">
+      <div class="hero-body">
+        <p class="title">Selamat Ulang Tahun ke-.. Pak Avie</p>
+        <p class="subtitle">{{ message }}</p>
+      </div>
     </section>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-    <script src="./index.js"></script>
+    <section class="gallery">
+      <div class="container has-text-centered">
+        <div class="columns is-mobile is-multiline">
+          <div class="column is-one-third-mobile is-one-quarter-tablet is-2-desktop" v-for="(avatar, index) in avatars">
+            <img class="items" :src="'img/' + avatar.src + '.png'" @click="swap($event, avatar, index)">
+            <audio :ref="'aud-' + index" preload>
+              <source :src="'mp3/' + avatar.src + '.mp3'" type="audio/mp3">
+              Your browser does not support the audio element.
+            </audio>
+            <h2 class="is-size-4 has-text-weight-normal nama">{{ avatar.src }}</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <script src="./index.js"></script>
 </body>
 
 </html>

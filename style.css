@@ -2,6 +2,10 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
+.gallery {
+  margin-top: 10px;
+}
+
 .items {
   cursor: pointer;
 }
