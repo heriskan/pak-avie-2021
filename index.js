@@ -76,6 +76,10 @@ var app = new Vue({
         src: 'bella-inar',
         play: false
       },
+      {
+        src: 'herry',
+        play: false
+      },
     ]
   },
   methods: {
