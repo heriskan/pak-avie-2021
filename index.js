@@ -91,7 +91,10 @@ var app = new Vue({
         event.target.src = "img/" + avatar.src + ".gif";
         audio.play();
         setTimeout(
-          function () { event.target.src = "img/" + avatar.src + ".png" }, audio.duration * 1000
+          function () { 
+            event.target.src = "img/" + avatar.src + ".png";
+            avatar.play = false;
+          }, audio.duration * 1000
         )
       } else {
         event.target.src = "img/" + avatar.src + ".png";
