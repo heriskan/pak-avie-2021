@@ -73,7 +73,7 @@ var app = new Vue({
         play: false
       },
       {
-        src: 'bella',
+        src: 'bella-inar',
         play: false
       },
     ]
