@@ -2,7 +2,7 @@ var app = new Vue({
   el: '#pbb-stickers',
   data: {
 
-    message: 'Silakan klik pada foto untuk aktifkan animasi dan suara.',
+    message: 'Ini adalah kartu ucapan elektronik persembahan dari kami. Silakan klik pada foto untuk aktifkan animasi dan suara.',
     avatars: [
       {
         src: 'tuti',
