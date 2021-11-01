@@ -85,7 +85,7 @@ var app = new Vue({
   methods: {
     swap: (event, avatar, index) => {
       var audio = app.$refs['aud-' + index][0];
-      audio.volume = 0.4;
+      audio.volume = 0.6;
       if (avatar.play == false) {
         avatar.play = true
         event.target.src = "img/" + avatar.src + ".gif";
